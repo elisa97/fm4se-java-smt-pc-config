@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Map;
 
 public class PcConfigReader {
-	private static final String compoentsFile = "components.csv";
+	private static final String componentsFile = "components.csv";
 	private static final String constraintsFile = "constraints.csv";
 	
 	public static Map<String, Integer> getComponents(String category) {
 		Map<String, Integer> cmps = new LinkedHashMap<String, Integer>();
 		try {
-			for (String line : Files.readAllLines(Paths.get(compoentsFile))) {
+			for (String line : Files.readAllLines(Paths.get(componentsFile))) {
 				String[] ls = line.split(",");
 				if (ls.length == 3) {					
 					if (ls[0].trim().equalsIgnoreCase(category.trim())) {
